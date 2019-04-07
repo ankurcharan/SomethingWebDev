@@ -1,0 +1,1 @@
+npm i <package_name> <package_name> <package_name> <package_name>
