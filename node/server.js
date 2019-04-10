@@ -49,7 +49,8 @@ app.post('/post', (req, res) => {
 
 
 //create server
-const PORT = 9000;
+const PORT = 500;
 app.listen(PORT, () => {
+	
 	console.log("Server started at http://localhost:9000");
 })

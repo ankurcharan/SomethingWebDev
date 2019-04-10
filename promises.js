@@ -1,8 +1,7 @@
 
-
 function asyncOperation()
 {
-	return new Promise(function (resolve, reject) {
+	return new Promise((resolve, reject) => {
 
 		// async task
 
@@ -14,17 +13,14 @@ function asyncOperation()
 		// koi error ni aayegi
 
 		resolve("values");
-	})
+	});
 }
 
-
-
-asyncOperation()
-.then((snapshot) => {
-	console.log(snapshot);
-})
-.catch((err) => {
-	console.log(err);
+// asyncOperation().then(function).catch(function)
+asyncOperation().then((snapshot) => {
+	console.log("then,", snapshot);
+}).catch((err) => {
+	console.log("catchh " , err);
 })
 
 
@@ -34,3 +30,17 @@ asyncOperation()
 // .then(() => {})
 // .then(() => {})
 // .catch((err) => {})
+
+
+
+
+
+
+
+
+
+
+
+
+
+

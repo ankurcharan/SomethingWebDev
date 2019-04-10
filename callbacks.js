@@ -1,6 +1,7 @@
 // function a()
 // {
 // 	console.log(2 + 3);
+// 	console.log("Hello");
 // }
 
 
@@ -13,6 +14,30 @@
 // a();
 // b();
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // but what if operations in functions are not primitive
 
 
@@ -21,6 +46,8 @@
 
 // simulate async operation using these
 // setTimeout(function, timeInMillisec);
+// 1 sec = 1000ms
+
 // setTimeout(() => {
 // 	console.log("3 sec baad");
 // }, 3000);
@@ -67,6 +94,7 @@
 // CALLBACKS
 // example
 // app.listen(port, function);
+// aap.listen(port);
 
 // function asynOperation(callback)
 // {
@@ -78,9 +106,10 @@
 // 	console.log("doing its own task");
 
 
-// 	setTimeout(() => {
-// 		callback();
-// 	}, 5000);
+	// setTimeout(() => {
+	// 	if(callback)
+	// 		callback();
+	// }, 5000);
 
 
 // }
@@ -92,6 +121,7 @@
 
 
 // asynOperation(joAsyncKeBaadChlnaChahiye);
+
 
 
 
@@ -132,9 +162,9 @@
 // 	console.log(y);
 // }
 
-// a(2);
-// console.log();
 // a(2, 3);
+// console.log();
+// a(2);
 
 
 
@@ -147,41 +177,38 @@
 
 
 // ERROR FIRST FUNCTIONS
-function (error, requiredParam)
-{
+
+// function x(error, requiredParam)
+// {
+// 	if(err)			// if(err != null && err != undefined)
+// 	{
+// 		// handle error
+// 	}
+
+// 	// normal execution using requiredParam
+// }
+
+
+
+app.listen(port, function (err, values) {
 	if(err)
 	{
-		// handle error
+		console.log("server not started");
+		return;
 	}
+	console.log("server started");
+});
 
-	// normal execution using requiredParam
+
+
+
+function asyncOperation(callback)
+{
+	// koi error aayi
+
+	callback(new Error("Error messaage"));
+
+	// koi errro ni aayi
+
+	callback(null, values);
 }
-
-
-
-
-
-
-
-// app.listen(port, function(err) {
-// 	if(err)
-// 	{
-// 		console.log("'server not started");
-// 		return;
-// 	}
-// 	console.log("server started");
-// });
-
-
-
-
-// function asyncOperation(callback)
-// {
-// 	// koi error aayi
-
-// 	callback(new Error("Error messaage"));
-
-// 	// koi errro ni aayi
-
-// 	callback(null, values);
-// }
