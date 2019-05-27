@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+
+
+
+	<script
+		src="https://code.jquery.com/jquery-3.4.0.js"
+		integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+		crossorigin="anonymous">
+	</script>
+
+
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+			 
+</head>
+<body>
+	
+	
+
+	<div class="container">
+	
+		<h1>Weather App</h1>
+
+		<div class="row">
+			<div class="input-field col s12">
+				<input placeholder="City Name" id="city" type="text" class="validate">
+				<label for="city">City Name</label>
+			</div>
+
+			<div class="input-field col s12">
+				<input placeholder="City Name" id="xxxx" type="text" class="validate">
+				<label for="xxxx">City Name</label>
+			</div>
+		</div>
+
+		<button id="submit" class="btn waves-effect waves-light" type="submit" name="action">Submit
+		</button>				
+
+	</div>
+
+
+
+
+	<script>
+		// $('#submit').click(function)
+		$('#submit').click(() => {
+			let cityName = $('#city').val();
+
+			let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=3e2cf5d377d212d9d1bdf5109a88b672`;
+			// alert(url);
+
+			// $.ajax({
+			// 	type: "TypeOfRequest",
+			// 	url: "kisUrlPeReqskrniHai",
+			// 	success: function jo run hga successful rqst pe
+			// })
+
+			$.ajax({
+				type: "GET",
+				url: `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=3e2cf5d377d212d9d1bdf5109a88b672`,
+				success: function (res) {
+
+					if(res.cod === 200)
+					{
+						$('#xxxx').val(`${res.main.temp} F`);
+					}
+				}
+			})
+		})
+	</script>
+
+</body>
+</html>
