@@ -3,13 +3,15 @@ const request = require('request');
 
 const app = express();
 
-
+// Static Serve
 app.use(express.static(__dirname + "/public"));
+
+
+
 
 app.get('/weather', (req, res) => {
 
-	console.log("sxs");
-
+	console.log(__dirname);
 
 	let getRequestData = req.query;
 	let cityName = getRequestData.city;

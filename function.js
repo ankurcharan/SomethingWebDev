@@ -16,7 +16,6 @@
 // 	console.log('without params', x);
 // }
 
-
 // functionName(2);
 
 
@@ -31,10 +30,10 @@
 
 
 // higher order functions
-function sqaure(x)
-{
-	return x * x;
-}
+// function sqaure(x)
+// {
+// 	return x * x;
+// }
 
 // console.log(sqaure(2));
 
@@ -58,6 +57,7 @@ function sqaure(x)
 
 
 
+
 function x(callback)
 {
 	// do anything
@@ -76,6 +76,6 @@ const y = () => {
 x(y);
 
 
-// y();
-// let zz = y;
-// zz();
+y();
+let zz = y;
+zz();

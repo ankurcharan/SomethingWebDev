@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
 
-
-
 	<script
-		src="https://code.jquery.com/jquery-3.4.0.js"
-		integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
-		crossorigin="anonymous">
-	</script>
+  		src="https://code.jquery.com/jquery-3.4.1.js">
+  	</script>
 
 
-	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-	 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-			 
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 <body>
-	
-	
 
 	<div class="container">
 	
@@ -41,16 +36,26 @@
 
 		<button id="submit" class="btn waves-effect waves-light" type="submit" name="action">Submit
 		</button>				
-
 	</div>
 
 
+
+	<!-- $('cssSelector')-->
 
 
 	<script>
 		// $('#submit').click(function)
 		$('#submit').click(() => {
+
 			let cityName = $('#city').val();
+
+			// string = "text"
+			// let x = `
+			// 	hello
+			// 	hello
+			// 	hello
+			// `;
+
 
 			let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=imperial&appid=3e2cf5d377d212d9d1bdf5109a88b672`;
 			// alert(url);

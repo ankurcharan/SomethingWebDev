@@ -50,7 +50,7 @@
 
 // setTimeout(() => {
 // 	console.log("3 sec baad");
-// }, 3000);
+// }, 1500);
 
 
 
@@ -66,14 +66,10 @@
 // 	}, 5000);
 // }
 
-
 // function uploadingFile()
 // {
 // 	console.log("file uploaded");
 // }
-
-
-
 
 // fileDownload();
 // console.log("Uploading file");
@@ -106,14 +102,13 @@
 // 	console.log("doing its own task");
 
 
-	// setTimeout(() => {
-	// 	if(callback)
-	// 		callback();
-	// }, 5000);
+// 	setTimeout(() => {
+// 		if(callback)
+// 			callback();
+// 	}, 5000);
 
 
 // }
-
 
 // const joAsyncKeBaadChlnaChahiye = () => {
 // 	console.log("Hello");
@@ -190,25 +185,25 @@
 
 
 
-app.listen(port, function (err, values) {
-	if(err)
-	{
-		console.log("server not started");
-		return;
-	}
-	console.log("server started");
-});
+// app.listen(port, function (err, values) {
+// 	if(err)
+// 	{
+// 		console.log("server not started");
+// 		return;
+// 	}
+// 	console.log("server started");
+// });
 
 
 
 
-function asyncOperation(callback)
-{
-	// koi error aayi
+// function asyncOperation(callback)
+// {
+// 	// koi error aayi
 
-	callback(new Error("Error messaage"));
+// 	callback(new Error("Error messaage"));
 
-	// koi errro ni aayi
+// 	// koi errro ni aayi
 
-	callback(null, values);
-}
+// 	callback(null, values);
+// }
